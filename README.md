@@ -1,42 +1,34 @@
+Liver-disease-prediction
+Business Problem
+Problem Context
 
-# Liver Disease Prediction
+Patients with Liver disease have been continuously increasing because of excessive consumption of alcohol, inhaling of harmful gases, and intake of contaminated food, pickles, and drugs. This dataset was used to evaluate prediction algorithms to reduce the burden on doctors.
+Content
 
-This project is about the prediction of liver disease considering various parameters
-related to Liver.
+This data set contains 416 liver patient records and 167 nonliver patient records collected from North East of Andhra Pradesh, India. The "Dataset" column is a class label used to divide groups into the liver patient (liver disease) or not (no disease). This data set contains 441 male patient records and 142 female patient records.
 
+Any patient whose age exceeded 89 is listed as being of age "90".
+Features:
 
-## Deployment
+    Age of the patient
+    The gender of the patient
+    Total Bilirubin
+    Direct Bilirubin
+    Alkaline Phosphotase
+    Alanine Aminotransferase
+    Aspartate Aminotransferase
+    Total Proteins
+    Albumin
+    Albumin and Globulin Ratio
+    Dataset: field used to split the data into two sets (patient with liver disease, or no disease)
 
-To deploy this project run
+Mapping business problem to ML problem
+Type of Machine Learning Problem
 
+It is a binary classification problem, where given the above set of features, we need to predict if a given patient has liver disease or not
+Evaluation Metric (KPI)
 
-python app.py
+Since this is a binary classification problem, we use the following metrics:
 
-  pip install -r requirements.txt
-  
-## 🚀 About Me
-I'm an aspiring Data scientist...
-I am a citizen scientist
-I am a space enthusiast
-I am a nature lover #environmentalist
-
-
-  
-## 🔗 Links
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/krishna-bhutada-b01929134/)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/krishnabhutada7)
-
-  
-## Installation
-
-Install my-project with npm
-
-```bash
-  npm install my-project
-  cd my-project
-```
-    
-## 🛠 Skills
-Python,Machine Learning,Numpy,Pandas,Matplotlib,Seaborn,Sklearn...
-
-Algorithms Used:Random Forest Regressor,Ada Boost Regressor.
+    Confusion matrix - For getting a better clarity of the no of correct/incorrect predictions by the model
+    ROC-AUC - It considers the rank of the output probabilities and intuitively measures the likelihood that the model can distinguish between a positive point and a negative point. (Note: ROC-AUC is typically used for binary classification only). We will use AUC to select the best model.
